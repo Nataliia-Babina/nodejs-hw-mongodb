@@ -7,7 +7,9 @@ import { getAllContacts, getContatById } from './services/contacts.js';
 const PORT = Number(env('PORT', 3000));
 
 export const setupServer = () => {
+
   const app = express();
+
   app.use(express.json());
   app.use(cors());
   app.use(pino({ transport: { target: 'pino-pretty' } }));
