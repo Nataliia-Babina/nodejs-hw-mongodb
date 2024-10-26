@@ -7,7 +7,7 @@ export const validateBody = (schema) => async (req, res, next) => {
     });
     next();
   } catch (err) {
-    const error = createHttpError(400, 'Bad Request', {
+    const error = createHttpError(400, 'Invalid Request: The provided ID is either missing or incorrect.', {
       errors: err.details,
     });
     next(error);
