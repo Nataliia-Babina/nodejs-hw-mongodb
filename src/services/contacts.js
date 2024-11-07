@@ -1,3 +1,4 @@
+import createHttpError from 'http-errors';
 import { contactsCollection } from '../db/models/contact.js';
 import { SORT_ORDER } from '../constants/index.js';
 import { calculatePaginationData } from '../utils/calculatePaginationData.js';
@@ -14,18 +15,23 @@ export const getAllContacts = async ({
   const limit = perPage;
   const skip = (page - 1) * perPage;
 
-  const contactsQuery = contactsCollection.find();
+  const contactsQuery = contactsCollection.find({userId});
   if (contactType) contactsQuery.where('contactType').equals(contactType);
   if (isFavorite) contactsQuery.where('isFavourite').equals(isFavorite);
 
   const [contactsCount, contacts] = await Promise.all([
-    contactsCollection.find().merge(contactsQuery).countDocuments(),
+    contactsCollection.find({userId}).merge(contactsQuery).countDocuments(),
     contactsQuery
       .skip(skip)
       .limit(limit)
       .sort({ [sortBy]: sortOrder })
       .exec(),
   ]);
+
+   if (!contactsCount) {
+    throw createHttpError(404, 'Contacts not found');
+  }
+  
   const paginationData = calculatePaginationData(contactsCount, perPage, page);
   return {
     data: contacts,
