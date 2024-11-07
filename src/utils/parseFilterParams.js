@@ -6,7 +6,8 @@ const parseContactType = (type) => {
 };
 
 const parseIsFavorite = (isFavoriteValue) => {
-  if (typeof isFavoriteValue === 'boolean') return { isFavoriteValue };
+  if (typeof isFavoriteValue === 'boolean')
+  return { isFavoriteValue };
   const toString = String(isFavoriteValue).toLowerCase();
   if (toString === 'true' || toString === '1') return true;
   if (toString === 'false' || toString === '0') return false;

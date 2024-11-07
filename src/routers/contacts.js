@@ -21,7 +21,7 @@ router.get('/', ctrlWrapper(getAllContactsController));
 
 router.get('/:contactId', isValidId, ctrlWrapper(getContactByIdController));
 
-router.post('/contacts', validateBody(createContactSchema), ctrlWrapper(createContactController));
+router.post('/', validateBody(createContactSchema), ctrlWrapper(createContactController));
 
 router.patch('/:contactId', validateBody(updateContactSchema), ctrlWrapper(patchContactController));
 
