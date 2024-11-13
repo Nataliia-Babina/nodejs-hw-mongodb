@@ -16,7 +16,9 @@ import { isValidId } from '../middlewares/isValidId.js';
 import { createSession } from '../utils/createSession.js';
 
 const router = Router();
+
 router.use(createSession);
+
 router.get('/', ctrlWrapper(getAllContactsController));
 
 router.get('/:contactId', isValidId, ctrlWrapper(getContactByIdController));

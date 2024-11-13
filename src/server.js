@@ -2,7 +2,7 @@ import express from 'express';
 import { env } from './utils/env.js';
 import pino from 'pino-http';
 import cors from 'cors';
-import router from './routers/contacts.js';
+import router from './routers/index.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
 import cookieParser from 'cookie-parser';
