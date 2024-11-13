@@ -10,6 +10,7 @@ import {
 } from '../controllers/auth.js';
 import { validateBody } from '../middlewares/validateBody.js';
 
+
 const router = Router();
 
 router.post(
