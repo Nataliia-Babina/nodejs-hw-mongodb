@@ -13,7 +13,7 @@ export const SMTP = {
   SMTP_PASSWORD: 'SMTP_PASSWORD',
   SMTP_FROM: 'SMTP_FROM',
 };
-export const TEMP_UPLOAD_DIR = path.join(process.cwd('temp'));
+export const DOWNLOAD_DIRECTORY = path.join(process.cwd('temp'));
 export const CLOUDINARY = {
   CLOUD_NAME: 'CLOUD_NAME',
   API_KEY: 'API_KEY',
