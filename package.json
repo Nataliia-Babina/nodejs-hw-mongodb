@@ -1,5 +1,8 @@
 {
+
+
   "name": "hw6",
+
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -9,7 +12,7 @@
     "start": "node ./src/index.js"
   },
   "keywords": [],
-  "author": "Rendes <1admin@ukr.net>",
+  "author": "nataliia.babina.1988@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.11.1",
@@ -19,9 +22,14 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
+
     "cloudinary": "^2.5.1",
+
+    "cookie": "^1.0.1",
+
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "handlebars": "^4.7.8",
