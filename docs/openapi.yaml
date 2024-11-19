@@ -35,11 +35,11 @@ paths:
       $ref: ../swagger/paths/auth/reset-pwd/post.yaml
   /contacts/{id}:
     get:
-      $ref: ../swagger/paths/contacts/id/get.yaml
+      $ref: ../swagger/paths/contacts/{id}/get.yaml
     delete:
-      $ref: ../swagger/paths/contacts/id/delete.yaml
+      $ref: ../swagger/paths/contacts/{id}/delete.yaml
     patch:
-      $ref: ../swagger/paths/contacts/id/patch.yaml
+      $ref: ../swagger/paths/contacts/{id}/patch.yaml
   /contacts:
     get:
       $ref: ../swagger/paths/contacts/get.yaml
