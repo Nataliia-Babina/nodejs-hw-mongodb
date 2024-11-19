@@ -13,7 +13,7 @@ tags:
     description: operations with authorization
 servers:
   - url: http://localhost:3000
-  - url: https://nodejs-hw-mongodb-4-q2do.onrender.com
+  - url: https://nodejs-hw-mongodb-7-n3bc.onrender.com
 paths:
   /auth/register:
     post:
