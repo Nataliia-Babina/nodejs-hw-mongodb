@@ -7,10 +7,7 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   description: ContactsBook with user authorization
 tags:
-  - name: contacts
-    description: operations with list of contacts
-  - name: auth
-    description: operations with authorization
+  
 servers:
   - url: http://localhost:3000
   - url: https://nodejs-hw-mongodb-7-n3bc.onrender.com
